@@ -1,0 +1,81 @@
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 15, 30, 25]
+plt.plot(x, y)
+plt.title("My Plot")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.show()
+days = [1, 2, 3, 4, 5]
+sales = [100, 120, 150, 140, 180]
+plt.plot(days, sales)
+plt.title("Daily Sales")
+plt.xlabel("Day")
+plt.ylabel("Sales")
+plt.show()
+age = [20, 22, 25, 28, 30, 35]
+salary = [25000, 28000, 32000, 40000, 45000, 60000]
+plt.scatter(age, salary)
+plt.title("Age vs Salary")
+plt.xlabel("Age")
+plt.ylabel("Salary")
+plt.show()
+marks = [45, 50, 55, 60, 65, 65, 70, 72, 75, 80, 85, 90, 95]
+plt.hist(marks)
+plt.title("Marks Distribution")
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+plt.show()
+salary = [25000, 27000, 30000, 32000, 35000, 38000, 40000, 150000]
+plt.boxplot(salary)
+plt.title("Salary Distribution")
+plt.ylabel("Salary")
+plt.show()
+departments = ["IT", "HR", "Sales", "Finance"]
+employees = [50, 20, 45, 30]
+plt.bar(departments, employees)
+plt.title("Employees by Department")
+plt.xlabel("Department")
+plt.ylabel("Employees")
+plt.show()
+plt.barh(departments, employees)
+plt.title("Employees by Department")
+plt.xlabel("Employees")
+plt.ylabel("Department")
+plt.show()
+sizes = [50, 30, 20]
+labels = ["Product A", "Product B", "Product C"]
+plt.pie(sizes, labels=labels)
+plt.title("Product Distribution")
+plt.show()
+plt.xlabel("Age")
+plt.ylabel("Salary")
+plt.title("Age vs Salary")
+days = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+sales_a = [100, 150, 120, 200, 180]
+sales_b = [80, 130, 160, 170, 220]
+plt.plot(days, sales_a, label="Product A")
+plt.plot(days, sales_b, label="Product B")
+
+plt.title("Product Sales Comparison")
+plt.xlabel("Days")
+plt.ylabel("Sales")
+plt.legend()
+plt.show()
+plt.grid()
+plt.figure(figsize=(8, 5))
+plt.figure(figsize=(8, 5))
+plt.hist(marks)
+plt.title("Marks Distribution")
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+plt.show()
+plt.subplot(1, 2, 1)
+plt.hist(marks)
+plt.title("Marks Distribution")
+plt.subplot(1, 2, 2)
+plt.boxplot(marks)
+plt.title("Marks Boxplot")
+plt.show()
+plt.savefig("marks_distribution.png")
