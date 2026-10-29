@@ -1,0 +1,97 @@
+import pandas as pd
+ages = pd.Series([21, 25, 30, 28])
+print(ages)
+data = {
+ "Name": ["Amit", "Rahul", "Priya", "Neha"],
+ "Age": [21, 25, 30, 28],
+ "Marks": [75, 82, 91, 68]
+}
+df1 = pd.DataFrame(data)
+print(df1)
+df1=pd.read_csv("/content/student.csv")
+df1.head()
+df1.head(10)
+df1.tail()
+df1.shape
+df1.columns
+df1.dtypes
+df1.info()
+df1.describe()
+df1['Age']
+df1[["Age","Marks"]]
+df1.loc[0]
+df1.loc[:,["Name","Marks"]]
+df1.iloc[0]
+df1.iloc[0:3]
+df1[df1["Marks"]>80]
+df1[(df1["Age"]>25)&(df1["Marks"]>70)]
+df1["Gender"].value_counts()
+df1["Gender"].unique()
+df1["Gender"].nunique()
+df1.isnull()
+df1.isnull().sum()
+df1.notnull()
+clean_df1=df1.dropna()
+clean_df1
+df1["Age"]=df1["Age"].fillna(df1["Age"].median())
+df1
+df1.isnull()
+df1.isnull().value_counts()
+df1["Age"].fillna(25)
+df1["Age"].isnull()
+df1.isnull().sum()
+df1.duplicated()
+df1.duplicated().sum()
+df1=df1.drop_duplicates()
+df1.sort_values("Marks")
+df1.sort_values("Marks",ascending=False)
+df1.describe()
+df1["Marks"].mean()
+df1["Marks"].median()
+df1["Marks"].mode()
+df1["Marks"].std()
+df1["Marks"].min()
+df1["Marks"].max()
+df1.groupby("Gender")["Marks"].mean()
+df1.groupby("Gender")["Marks"].agg(
+ ["mean", "median", "min", "max"]
+)
+df1["Marks"].agg(["mean", "median", "min", "max"])
+df1["Passed"]=df1["Marks"]>=40
+df1["Passed"]
+df1
+df1["Bonus_Marks"]=df1["Marks"]*0.10
+df1
+df1["Gender_Code"]=df1["Gender"].map({"Male":1,"Female":0})
+df1
+df1["Gender"] = df1["Gender"].replace({
+ "M": "Male",
+ "F": "Female"
+})
+df1
+df1["Age"]=df1["Age"].astype(int)
+df1.dtypes
+df1["Date"] = pd.to_datetime(df1["Date"])
+df1["Date"]
+df1["Year"] = df1["Date"].dt.year
+df1["Month"] = df1["Date"].dt.month
+df1["Day"] = df1["Date"].dt.day
+df1["DayOfWeek"] = df1["Date"].dt.dayofweek
+df1
+df1=df1.drop(["Age","Gender"],axis=1)
+df1
+df1 = df1.rename(columns={
+ "Marks": "Final_Marks"
+})
+
+#combined=pd.concat([df1,df2])
+df2 = pd.read_csv("departments.csv")
+merged = pd.merge(
+ df1,
+ df2,
+ on="Department_ID"
+)
+
+df.corr(numeric_only=True)
+df.to_csv("cleaned_data.csv",index=False)
+df.to_excel("cleaned_data.xlsx",index=False)
