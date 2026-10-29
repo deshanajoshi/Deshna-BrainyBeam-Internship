@@ -1,6 +1,16 @@
-# Deshna-BrainyBeam-Internship
-Data Science and Machine Learning Internship Tasks at BrainyBeam Info-Tech Pvt. Ltd.
+# Deshna – BrainyBeam Internship
 
+## About
+This repository contains programming exercises and practical tasks completed as part of my Data Science and Machine Learning internship at **BrainyBeam Info-Tech Pvt. Ltd.**
+
+## Topics Covered
+- Python fundamentals and practice programs
+- NumPy array operations and numerical calculations
+- Pandas data loading, cleaning, filtering, grouping, and analysis
+- Matplotlib practice and data visualization
+
+## Repository Structure
+```text
 Deshna-BrainyBeam-Internship/
 ├── README.md
 ├── Complete_Mini_example.ipynb
@@ -27,3 +37,33 @@ Deshna-BrainyBeam-Internship/
     ├── Matplotlib_practice.ipynb
     ├── student_data.csv
     └── Sunflower.jpeg
+```
+
+## Tools and Libraries
+- Python
+- Jupyter Notebook
+- NumPy
+- Pandas
+- Matplotlib
+
+## How to Run
+### Python files
+1. Install Python.
+2. Open a terminal in the repository folder.
+3. Run a program, for example:
+   ```bash
+   python python/task1.py
+   ```
+
+### Jupyter Notebooks
+1. Install Jupyter Notebook and the required libraries.
+2. Start Jupyter Notebook from the repository folder.
+3. Open a notebook (`.ipynb`) and run its cells.
+
+Install the main libraries with:
+```bash
+pip install numpy pandas matplotlib jupyter openpyxl
+```
+
+## Notes
+- CSV and Excel files are included as datasets for practice and analysis.
