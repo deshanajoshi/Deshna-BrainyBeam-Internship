@@ -36,7 +36,6 @@ Deshna-BrainyBeam-Internship/
     ├── matplotlib_practical_task.ipynb
     ├── Matplotlib_practice.ipynb
     ├── student_data.csv
-    └── Sunflower.jpeg
 ```
 
 ## Tools and Libraries
